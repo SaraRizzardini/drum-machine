@@ -64,7 +64,7 @@ function App() {
   return (
     <div className="App">
       <center>
-        <div className="drum-machine d-flex flex-row">
+        <div className="drum-machine d-flex flex-row border border-5">
           <div className="p-2" style={{ width: "50%", height: "auto" }}>
             <table className="table table-dark">
               <thead>
@@ -78,7 +78,7 @@ function App() {
               <tbody>
                 {["QWE", "ASD", "ZXC"].map((row, rowIndex) => (
                   <tr key={rowIndex}>
-                    <th scope="row">{rowIndex + 1}</th>
+                    <th scope="row"></th>
                     {row.split("").map((key) => (
                       <td key={key}>
                         <button
@@ -96,8 +96,8 @@ function App() {
               </tbody>
             </table>
           </div>
-		  <div className="p-2" style={{width:"50%", height:'auto'}}>
-		  <div className="display">{currentSound}</div>
+		  <div className="p-2" style={{width:"50%", height:'auto', backgroundColor:"rgba(0,0,0,0.9)"}}>
+		  <div className="display rounded-pil" style={{top:"50%", height:'auto'}}>{currentSound}</div>
 </div>
 
         </div>
